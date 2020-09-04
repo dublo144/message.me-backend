@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { AuthenticationError, PubSub } = require('apollo-server-express');
+const { AuthenticationError } = require('apollo-server-express');
 
 module.exports = (context) => {
   if (context.connection) {
