@@ -4,6 +4,8 @@ const {
   UserInputError
 } = require('apollo-server-express');
 const { transformConversation } = require('../../helpers/merge');
+const ConversationModel = require('../../../models/ConversationModel');
+const UserModel = require('../../../models/UserModel');
 
 const typeDefs = gql`
   type Conversation {
