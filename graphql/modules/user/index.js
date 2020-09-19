@@ -31,6 +31,9 @@ const typeDefs = gql`
   type AuthData {
     username: String!
     userId: ID!
+    email: String!
+    firstName: String!
+    lastName: String!
     token: String!
     tokenExpiration: Int!
   }
@@ -97,6 +100,9 @@ const resolvers = {
       return {
         username: user.username,
         userId: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
         token,
         tokenExpiration: 1
       };

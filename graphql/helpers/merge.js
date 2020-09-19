@@ -28,7 +28,7 @@ const messages = async (messageIds) => {
   try {
     const messages = await MessageModel.find({
       _id: { $in: messageIds }
-    });
+    }).sort({ date: 'asc' });
     return messages.map(transformMessage);
   } catch (error) {
     console.error(error);
@@ -79,6 +79,7 @@ const transformUser = (user) => {
 };
 
 const transformMessage = (message) => {
+  console.log(message);
   return {
     ...message._doc,
     id: message.id,
