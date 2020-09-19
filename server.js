@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 const authMiddleware = require('./middleware/authMiddleware');
 const jwt = require('jsonwebtoken');
 const http = require('http');
-const something = 'hi!';
 
 const server = new ApolloServer({
   modules: [
